@@ -1,12 +1,15 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
+import { CharacterRepository } from '../repositories/character.repository';
+import { CommonModule } from '@angular/common';
 
 @Component({
-  selector: 'app-characters',
+  selector: 'app-character',
   standalone: true,
-  imports: [],
-  templateUrl: './characters.component.html',
-  styleUrl: './characters.component.css'
+  imports: [CommonModule],
+  templateUrl: './characters.component.html'
 })
-export class CharactersComponent {
 
+export class CharactersComponent {
+  characterRepo = inject(CharacterRepository);
+  characters$ = this.characterRepo.characters$;
 }

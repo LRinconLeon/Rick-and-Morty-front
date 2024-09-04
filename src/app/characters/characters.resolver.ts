@@ -1,4 +1,3 @@
-// characters.resolver.ts
 import { Injectable } from '@angular/core';
 import { Resolve } from '@angular/router';
 import { Character, CharacterRepository } from '../repositories/character.repository';

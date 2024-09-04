@@ -1,0 +1,19 @@
+<div *ngIf="character$ | async as character; else loading" class="bg-cover bg-center">
+  <div class="max-w-md mx-auto bg-white shadow-md rounded-3xl overflow-hidden mt-8 mb-8">
+    <img [src]="character.image" [alt]="character.name" class=" w-full object-cover">
+    <div class="p-6">
+      <h2 class="text-2xl font-bold mb-2">{{ character.name }}</h2>
+      <p class="text-gray-700 mb-1"><strong>Status:</strong> {{ character.status }}</p>
+      <p class="text-gray-700 mb-1"><strong>Species:</strong> {{ character.species }}</p>
+      <p class="text-gray-700 mb-1"><strong>Gender:</strong> {{ character.gender }}</p>
+      <p class="text-gray-700"><strong>Origin:</strong> {{ character.origin.name }}</p>
+      <p class="text-gray-700"><strong>Location:</strong> {{ character.location.name}}</p>
+    </div>
+  </div>
+</div>
+
+<ng-template #loading>
+  <div class="text-center py-10 min-h-screen flex items-center justify-center bg-cover bg-center">
+    <p class="text-lg font-medium text-white">Loading character details...</p>
+  </div>
+</ng-template>

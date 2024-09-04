@@ -1,3 +1,14 @@
+@font-face {
+  font-family: 'RickAndMortyFont';
+  src: url('./assets/fonts/Rick-and-Morty-Font/get_schwifty.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+body {
+  background-image: url('./assets/images/fondo.jpg');
+}
